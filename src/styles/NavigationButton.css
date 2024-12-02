@@ -1,0 +1,19 @@
+.navigation {
+    text-decoration: none;
+    color: white;
+}
+
+.text-container {
+    background-color: rgb(10, 10, 10);
+    margin: 30px;
+}
+
+.text-container:hover {
+    background-color: rgb(21, 13, 247); 
+}
+
+.button-text {
+    font-size: 30px;
+    margin: 0 50px 0 20px;
+    padding: 10px 0;
+}

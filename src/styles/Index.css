@@ -1,0 +1,8 @@
+.button-container {
+    position: absolute;
+    background-color: rgb(10, 10, 10, 0.5);
+    bottom: 50px;
+    left: 30px;
+    width: 300px;
+    display: block;
+  }

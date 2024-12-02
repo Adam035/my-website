@@ -1,0 +1,18 @@
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+#about-me {
+    font-size: 50px;
+}
+
+p a {
+    font-weight: bold;
+}
+
+p a:hover {
+    font-weight: normal;;
+    background-color: rgb(21, 13, 247);;
+}
