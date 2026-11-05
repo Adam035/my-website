@@ -4,7 +4,15 @@
 }
 
 body {
+  margin: 0;
   font-family: 'PixelOperator';
   background-color: black;
   color: white;
+}
+
+* { box-sizing: border-box; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
 }

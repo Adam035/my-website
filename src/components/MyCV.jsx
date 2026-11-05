@@ -1,6 +1,6 @@
 const MyCV = () => {
     return(
-        <embed src={`${process.env.PUBLIC_URL}/adam-lipian-cv.pdf`}  width="100%" height={window.innerHeight} type="application/pdf" />
+        <iframe title="Adam Lipian CV" src={`${process.env.PUBLIC_URL}/adam-lipian-cv.pdf`} style={{ display: 'block', width: '100%', height: '100dvh', border: 0 }} />
     );
 }
 

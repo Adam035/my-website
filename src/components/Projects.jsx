@@ -7,11 +7,11 @@ const Projects = () => {
     return (
         <div>
             <Bar />
-            <div className="container">
+            <main className="container">
                 {projects.map((project) => (
                     <Project key={project.id} project={project} />
                 ))}
-            </div>
+            </main>
         </div>
     );
 };

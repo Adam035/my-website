@@ -1,15 +1,15 @@
-body {
-    overflow-y: auto;
-    padding-bottom: 70px;
+.container {
+    width: min(70%, 1000px);
+    margin: 0 auto;
+    padding: 24px 0 70px;
 }
 
-.container {
-    width: 70%;
-    margin: auto;
-}
+.separator { border: 0; border-top: 2px dashed white; margin: 20px 40px; }
 
 .title {
     font-size: 40px;
+    margin: 10px 40px;
+    font-weight: normal;
 }
 
 p a {
@@ -22,6 +22,13 @@ p a:hover {
 }
 
 .show-details {
+    font: inherit;
+    font-size: 30px;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 10px 40px;
     font-weight: bold;
     display: inline-block;
     cursor: pointer;
@@ -41,4 +48,10 @@ img {
     max-height: 460px;
     max-width: 90%;
     width: auto;
+}
+
+@media (max-width: 700px) {
+    .container { width: 100%; padding: 20px 12px 60px; }
+    p { margin: 10px 16px; font-size: 24px; overflow-wrap: anywhere; }
+    .separator, .show-details, .title { margin-left: 16px; margin-right: 16px; }
 }

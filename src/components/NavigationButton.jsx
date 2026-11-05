@@ -5,7 +5,7 @@ const NavigationButton = ({text, href=null, target=null}) => {
     const [buttonText, setButtonText] = useState(text);
 
     return (
-        <a className="navigation" href={href} target={target}>
+        <a className="navigation" href={href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
             <div className='text-container'
                 onMouseEnter={() => setButtonText('cd ./' + text.toLowerCase().replace(" ", "_"))}
                 onMouseLeave={() => setButtonText(text)}

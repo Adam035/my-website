@@ -24,7 +24,7 @@ const Bar = () => {
 
     return (
         <nav>
-            <a href='/my-website'><p>{'adamlipian@'.concat(serverIp)}</p></a>
+            <a href={`${process.env.PUBLIC_URL}/#/`}><p>{'adamlipian@'.concat(serverIp)}</p></a>
             <p>{clientIp}</p>
         </nav>
     );

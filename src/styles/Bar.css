@@ -2,6 +2,9 @@ nav {
     background-color: rgb(21, 13, 247);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 16px;
 }
 
 a {
@@ -12,4 +15,11 @@ a {
 p {
     margin: 10px 40px;
     font-size: 30px;
+}
+
+nav p { margin: 4px 0; overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+    nav { flex-wrap: wrap; }
+    nav p { font-size: 20px; }
 }

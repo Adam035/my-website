@@ -1,43 +1,25 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const Project = ({ project }) => {
-    const margin = 80;
-    const ref = useRef();
-    const [width, setWidth] = useState(margin);
-    const [expandedProjects, setExpandedProjects] = useState([]);
-
-    useEffect(() => {
-        if (ref.current)
-            setWidth(ref.current.offsetWidth);
-    }, [])
-
-    let n = Math.floor((width - margin) / 11.25);
-    if (n > 0) n--;
-    const line = '-'.repeat(n);
-
-    const expand = (id) => {
-        setExpandedProjects((prev) =>
-          prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-        );
-      };
+    const [expanded, setExpanded] = useState(false);
 
     return(
-        <div className="project-container" ref={ref}>
-            <p>{line}</p>
-            <p className="title">{project.title}</p>
+        <article className="project-container">
+            <hr className="separator" />
+            <h2 className="title">{project.title}</h2>
             <div className="image-container">
-                {project.image && <img src={project.image} alt={project.title} />}
+                {project.image && <img src={`${process.env.PUBLIC_URL}/${project.image}`} alt={project.title} loading="lazy" />}
             </div>
-            <p className="show-details" onClick={() => expand(project.id)}>
-                {expandedProjects.includes(project.id) ? "Hide details" : "Show details"}
-            </p>
-            {expandedProjects.includes(project.id) && (
+            <button className="show-details" type="button" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
+                {expanded ? "Hide details" : "Show details"}
+            </button>
+            {expanded && (
                 <div>
                     <p>{project.details}</p>
-                    <p>{project.link && <a href={project.link}>{project.link}</a>}</p>
+                    {project.link && <p><a href={project.link} target="_blank" rel="noopener noreferrer">View project on GitHub</a></p>}
                 </div>
           )}
-        </div>
+        </article>
     );
 }
 

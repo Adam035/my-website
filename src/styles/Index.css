@@ -1,8 +1,7 @@
 .button-container {
-    position: absolute;
+    position: relative;
     background-color: rgb(10, 10, 10, 0.5);
-    bottom: 50px;
-    left: 30px;
-    width: 300px;
+    margin: auto 30px 50px;
+    width: min(300px, calc(100% - 60px));
     display: block;
   }
