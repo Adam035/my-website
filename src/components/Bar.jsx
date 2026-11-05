@@ -3,13 +3,18 @@ import '../styles/Bar.css'
 import axios from 'axios';
 
 const Bar = () => {
-    const [ip, setIp] = useState('');
+
+    const [serverIp, setServerIp] = useState('');
+    const [clientIp, setClientIp] = useState('');
 
     useEffect(() => {
         const fetchIP = async () => {
             try {
                 const response = await axios.get('https://api.ipify.org?format=json');
-                setIp(response.data.ip);
+                setClientIp(response.data.ip);
+                const dnsResponse = await axios.get('https://dns.google/resolve?name=github.io');
+                const githubIp = dnsResponse.data.Answer[0].data;
+                setServerIp(githubIp);
             } catch (error) {
                 console.error(error);
             }
@@ -17,15 +22,10 @@ const Bar = () => {
         fetchIP();
     }, []);
 
-    const pathname = () => {
-        if (window.location.pathname === '/') return 'adamlipian@'.concat(window.location.hostname);
-        else return 'adamlipian@'.concat(window.location.hostname.concat(window.location.pathname));
-    }
-
     return (
         <nav>
-            <a href='/'><p>{pathname()}</p></a>
-            <p>{ip}</p>
+            <a href='/my-website'><p>{'adamlipian@'.concat(serverIp)}</p></a>
+            <p>{clientIp}</p>
         </nav>
     );
 };

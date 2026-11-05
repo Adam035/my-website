@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "title": "Network Drive",
+        "details": "This project is a file storage system that makes a user’s resources available as a drive mounted in Windows. Through its integration with WinFsp, users can manage files and directories directly in Windows File Explorer: open, save, create, move, and delete them. The desktop application handles file system operations and forwards them to the backend through an API. The system has three components. The backend manages users, volumes, directories, and files, and exposes an API for the desktop client. Resource metadata is stored in PostgreSQL, while file contents are stored in MinIO. The frontend, built with React and TypeScript, supports registration, login, and user profiles. The desktop application mounts the drive and integrates the service with the Windows file system. Authentication uses FIDO2/WebAuthn. Access to the API is authorized using OAuth 2.0 and JWTs, while the desktop client protects its refresh token with Windows DPAPI. The backend and desktop client follow a hexagonal architecture. Business logic and use cases are separated from the implementations of the API, database, file storage, and WinFsp integration. This structure allows each integration to evolve without coupling its implementation details to the domain logic. Planned features include file encryption and sharing resources with other users.",
+        "link": "https://github.com/Adam035/network-drive"
+    },
+    {
+        "id": 2,
+        "title": "Real time ASCII vision",
+        "details": "The program in Python uses OpenCV to load an image and convert it to a grayscale format, where each pixel value ranges from 0 (black) to 255 (white), representing how dark the pixel is. This grayscale image is then treated as a 2D array of intensity values. The program divides the image into fixed-size blocks, with each block consisting of a specific number of pixels in width and height. For each block, the average intensity of its pixels is calculated. Based on this average, the block is replaced with a corresponding character from a predefined set, such as ' ', '.', '-', ',', '=', '+', '#', '@', and '$', where lighter blocks are represented by characters with less visual weight and darker blocks by denser characters. This approach creates an ASCII art representation of the original image, where text characters simulate the brightness and structure of the image.",
+        "image": "corvair.gif",
+        "link": "https://github.com/Adam035/real-time-ascii-vision"
+    },
+    {
+        "id": 3,
+        "title": "Decision tree and continuous attributes",
+        "details": "The implementation of the C5.0 algorithm focuses on evaluating its performance and effectiveness in tests using different methods for determining the number and placement of intervals. The goal is to establish whether any of these methods demonstrates superior or inferior effectiveness or if their performance depends on the specific dataset and the context of the analysis.",
+        "link": "https://github.com/Adam035/uma-24z-project"
+    },
+    {
+        "id": 4,
+        "title": "Raycasting engine",
+        "details": "The engine simulates a 3D perspective by casting rays from the player's viewpoint into a 2D map grid to determine what objects or walls are visible and at what distance. From the player’s position and field of view, rays are cast at incremental angles to determine what objects or walls are visible and at what distance. The screen is divided into vertical strips, with each strip corresponding to a ray; the height of the strip is proportional to the distance of the object hit, creating a perspective illusion. Efficient algorithms like Digital Differential Analysis (DDA) optimize ray traversal, while textures can be sampled to enhance visual detail. Although limited to flat environments with no vertical movement or advanced 3D effects, this approach is simple, performant, and ideal for retro-style rendering.",
+        "image": "raycaster.gif",
+        "link": "https://github.com/Adam035/raycaster"
+    },
+    {
+        "id": 5,
+        "title": "Web and mobile applications in a Docker container environment",
+        "details": "The project involves the implementation of a web and mobile application within a Docker containerized environment for a theater e-ticketing system, enabling online ticket purchase and seat selection through audience visualization. Key features include user account creation, authentication (login), browsing available performances with details such as dates (calendar), duration, and ticket prices. The system provides a graphical interface for seat selection, highlighting occupied and available seats, and supports purchasing tickets with electronic delivery via email for self-printing or digital presentation at the theater. Additionally, the application generates periodic reports, including the number of tickets sold per performance, total ticket revenue, and the most and least frequently selected seats.",
+        "image": "android.gif",
+        "link": "https://github.com/r3seal/UAIM_theater"
+    },
+    {
+        "id": 6,
+        "title": " Network device scanning system with potential threat detection and e-mail reporting",
+        "details": "Software architecture is based on a Docker container. The project utilizes the GVM (Greenbone Vulnerability Management) package, which includes, among other things, a vulnerability scanner. An SMTP server is responsible for sending emails. The isolation of the environment ensures that only the necessary resources for the program's operation will be utilized. The challenge was finding a container that included all the required tools with the appropriate versions for the project. The Immauss/OpenVAS image meets most of the requirements."
+    },
+    {
+        "id": 7,
+        "title": "Maze solver",
+        "details": "Maze is solved by using the simplest method, bruteforce :). The track is implemented as a linked list. If a node is neighbor of the tail and has not been visited before, then it is added to the list. A node is selected depending on its position from the tail, the highest priority is given to those above, then to the right, then down, those on the left are last. If there is no node to add (all neighbors of the tail were visited), then the last elements are removed from the list until a new node can be added (has not been visited yet).",
+        "image": "maze.gif",
+        "link": "https://github.com/Adam035/maze-solver"
+    },
+    {
+        "id": 8,
+        "title": "Tetris",
+        "details": "An implementation of Tetris in Java",
+        "image": "tetris.gif",
+        "link": "https://github.com/Adam035/tetris"
+    },
+    {
+        "id": 9,
+        "title": "Snake",
+        "details": "An implementation of Snake in Java",
+        "image": "snake.gif",
+        "link": "https://github.com/Adam035/snake"
+    }
+]

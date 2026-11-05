@@ -1,0 +1,44 @@
+body {
+    overflow-y: auto;
+    padding-bottom: 70px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.title {
+    font-size: 40px;
+}
+
+p a {
+    font-weight: bold;
+}
+
+p a:hover {
+    font-weight: normal;
+    background-color: rgb(21, 13, 247);
+}
+
+.show-details {
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.show-details:hover {
+    font-weight: normal;
+    background-color: rgb(21, 13, 247);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-height: 460px;
+    max-width: 90%;
+    width: auto;
+}
